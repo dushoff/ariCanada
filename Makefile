@@ -7,7 +7,7 @@ current: target
 Ignore = target.mk
 
 vim_session:
-	bash -cl "vmt"
+	bash -cl "vmt README.md"
 
 ######################################################################
 
