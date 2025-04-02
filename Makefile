@@ -1,7 +1,5 @@
 ## This is ariCanada (play with data from RVDSS)
 
-## This section is for Dushoff-style vim-setup and vim targeting
-## You can delete it if you don't want it
 current: target
 -include target.mk
 Ignore = target.mk
