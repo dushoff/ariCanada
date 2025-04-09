@@ -9,6 +9,8 @@ vim_session:
 
 ######################################################################
 
+Sources += $(wildcard *.R)
+
 autopipeR = defined
 
 ## FetchRVDSS.Rout: FetchRVDSS.R
