@@ -9,6 +9,14 @@ vim_session:
 
 ######################################################################
 
+autopipeR = defined
+
+## FetchRVDSS.Rout: FetchRVDSS.R
+
+viewDat.Rout: viewDat.R FetchRVDSS.rds
+
+######################################################################
+
 ### Makestuff
 
 Sources += Makefile README.md
@@ -27,7 +35,7 @@ makestuff:
 
 -include makestuff/os.mk
 
-## -include makestuff/pipeR.mk
+-include makestuff/pipeR.mk
 
 -include makestuff/git.mk
 -include makestuff/gitbranch.mk
