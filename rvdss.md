@@ -1,4 +1,10 @@
 
+## detections.Rout.tsv shows the things that my scripts suggest renaming; it should be empty now 2025 May 02 (Fri)
+## detections.tot.Rout.tsv shows the things I pull out as denominators
+## detections.pos.Rout.tsv shows the things I pull out as cases. It is currently missing non-pandemic h1n1.
+
+----------------------------------------------------------------------
+
 Copied over 2025 May 02 (Fri)
 
 It looks like respiratory_detections is the up-to-date file for each year and covers all of the info we need. It seems to have redundant tabulation, but not checked.

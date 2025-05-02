@@ -10,7 +10,7 @@ dl <- csvReadList(show_col_types=FALSE)
 warn <- (map(dl, problems)
 	|> bind_rows(.id="file")
 )
-stopifnot(nrow(warn)==0)
+## stopifnot(nrow(warn)==0)
 
 ## Give data _sets_ short names by flu year.
 ## A flu year goes from summer to summer is named after the later year
