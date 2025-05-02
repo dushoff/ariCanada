@@ -6,8 +6,7 @@ library(readr)
 library(dplyr)
 
 ## Read in a list of files and make sure there are no readr “problems”
-navalues <- c("", "NA", "N.R", "not tested", "not available")
-dl <- csvReadList(na = navalues, show_col_types=FALSE)
+dl <- csvReadList(show_col_types=FALSE)
 warn <- (map(dl, problems)
 	|> bind_rows(.id="file")
 )
