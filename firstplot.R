@@ -2,6 +2,7 @@ library(dplyr)
 library(ggplot2); theme_set(theme_classic(base_size=15))
 
 library(shellpipes)
+rpcall("2024.fourpath.firstplot.Rout firstplot.R 2024.fourpath.rda")
 loadEnvironments()
 
 base <- (ggplot(long)

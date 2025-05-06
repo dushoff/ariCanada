@@ -1,4 +1,5 @@
 library(shellpipes)
+rpcall("2024.fourpath.Rout fourpath.R rvdss_canada/data/season_2023_2024/respiratory_detections.csv")
 manageConflicts()
 
 library(dplyr)
