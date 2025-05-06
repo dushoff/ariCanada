@@ -1,4 +1,5 @@
 library(shellpipes)
+rpcall("detections.Rout detections.R vnames.tsv rvdss_canada/data/season_2013_2014/respiratory_detections.csv rvdss_canada/data/season_2014_2015/respiratory_detections.csv rvdss_canada/data/season_2015_2016/respiratory_detections.csv rvdss_canada/data/season_2016_2017/respiratory_detections.csv rvdss_canada/data/season_2017_2018/respiratory_detections.csv rvdss_canada/data/season_2018_2019/respiratory_detections.csv rvdss_canada/data/season_2019_2020/respiratory_detections.csv rvdss_canada/data/season_2020_2021/respiratory_detections.csv rvdss_canada/data/season_2021_2022/respiratory_detections.csv rvdss_canada/data/season_2022_2023/respiratory_detections.csv rvdss_canada/data/season_2023_2024/respiratory_detections.csv rvdss_canada/data/season_2024_2025/respiratory_detections.csv")
 manageConflicts()
 
 library(purrr)

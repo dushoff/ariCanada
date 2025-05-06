@@ -26,7 +26,7 @@ Sources += vnames.tsv
 ## detections.tot.Rout.tsv: detections.R  vnames.tsv
 ## detections.pos.Rout.tsv: detections.R  vnames.tsv
 detections.Rout: detections.R vnames.tsv
-	$(pipeR)
+	$(pipeRcall)
 detections.Rout: $(wildcard rvdss_canada/data/season*/respiratory_detections.csv)
 
 ## Some notes
@@ -45,36 +45,36 @@ detections.csv: rvdss_canada rvdss_canada/data
 
 ## Playing around only (2024 flu year is over) 
 lastYear.Rout: lastYear.R rvdss_canada/data/*_*_2024/respiratory_detections.csv
-	$(pipeR)
+	$(pipeRcall)
 
 lastYear.plots.Rout: firstplot.R lastYear.rds
-	$(pipeR)
+	$(pipeRcall)
 
 ## For years with sarscov2 (flu years 2023 and 2024; 2025 has a different name)
 ## 2023.fourpath.Rout: fourpath.R
 ## Getting very hacky! Some years don't have the flu total...
 impmakeR += fourpath
 %.fourpath.Rout: fourpath.R rvdss_canada/data/*_*_%/respiratory_detections.csv
-	$(pipeR)
+	$(pipeRcall)
 
 impmakeR += twopath
 ## 2014.twopath.Rout: twopath.R
 %.twopath.Rout: twopath.R rvdss_canada/data/*_*_%/respiratory_detections.csv
-	$(pipeR)
+	$(pipeRcall)
 
 impmakeR += firstplot
 ## 2024.fourpath.firstplot.Rout: firstplot.R
 ## 2023.fourpath.firstplot.Rout: firstplot.R
 ## 2014.twopath.firstplot.Rout: firstplot.R twopath.R
 %.firstplot.Rout: firstplot.R %.rda
-	$(pipeR)
+	$(pipeRcall)
 
 impmakeR += secondplot
 ## 2024.fourpath.secondplot.Rout: secondplot.R
 ## 2023.fourpath.secondplot.Rout: secondplot.R
 ## 2014.twopath.secondplot.Rout: secondplot.R twopath.R
 %.secondplot.Rout: secondplot.R %.rda
-	$(pipeR)
+	$(pipeRcall)
 
 rvdssYears = 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024
 rvdssBrin = $(rvdssYears:%=%.twopath.firstplot.Rout.pdf)
@@ -89,7 +89,7 @@ brin.Rout: brin.R 2014.twopath.R
 ## Trying to fetch on our own
 Sources += $(wildcard *.R)
 
-autopipeR = defined
+autopipeRcall = defined
 
 ## FetchRVDSS.Rout: FetchRVDSS.R
 
