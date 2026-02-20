@@ -1,4 +1,5 @@
 library(shellpipes)
+rpcall("2014.twopath.Rout twopath.R rvdss_canada/data/season_2013_2014/respiratory_detections.csv")
 manageConflicts()
 
 library(dplyr)

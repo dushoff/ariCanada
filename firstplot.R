@@ -3,6 +3,8 @@ library(ggplot2); theme_set(theme_classic(base_size=15))
 
 library(shellpipes)
 rpcall("2024.fourpath.firstplot.Rout firstplot.R 2024.fourpath.rda")
+rpcall("2023.fourpath.firstplot.Rout firstplot.R 2023.fourpath.rda")
+rpcall("2014.twopath.firstplot.Rout firstplot.R 2014.twopath.rda")
 loadEnvironments()
 
 base <- (ggplot(long)
@@ -26,7 +28,7 @@ print(base + scale_y_log10())
 	+ geom_line(data=dis, aes(date, percentP), color="blue")
 ) -> combplot
 
-print(combplot %+% (long |> filter(category=="confirmations"))
+print(combplot + (long |> filter(category=="confirmations"))
 	+ ylab("Confirmations / %Pos")
 )
 
