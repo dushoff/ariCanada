@@ -1,5 +1,6 @@
 
 ## detections.Rout.tsv shows the things that my scripts suggest renaming; it should be empty now 2025 May 02 (Fri)
+	## Not currently empty, but seems to reflect only style differences, not actual redundancy
 ## detections.tot.Rout.tsv shows the things I pull out as denominators
 ## detections.pos.Rout.tsv shows the things I pull out as cases. It is currently missing non-pandemic h1n1.
 
