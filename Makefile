@@ -50,6 +50,16 @@ lastYear.Rout: lastYear.R rvdss_canada/data/*_*_2024/respiratory_detections.csv
 lastYear.plots.Rout: firstplot.R lastYear.rds
 	$(pipeRcall)
 
+######################################################################
+
+## The chaining stuff below is acting insanely weird!
+
+## CIHR grant special code before I go crazy
+ariPlot.Rout: ariPlot.R 2014.twopath.rda 
+	$(pipeR)
+
+######################################################################
+
 ## For years with sarscov2 (flu years 2023 and 2024; 2025 has a different name)
 ## 2023.fourpath.Rout: fourpath.R
 ## Getting very hacky! Some years don't have the flu total...
@@ -89,7 +99,7 @@ brin.Rout: brin.R 2014.twopath.R
 ## Trying to fetch on our own
 Sources += $(wildcard *.R)
 
-autopipeRcall = defined
+## autopipeRcall = defined
 
 ## FetchRVDSS.Rout: FetchRVDSS.R
 
